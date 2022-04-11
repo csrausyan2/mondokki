@@ -1,6 +1,9 @@
 package accomodationHandler
 
 import (
+	"fmt"
+	"time"
+
 	"github.com/noieda/mondokki/database"
 	"github.com/noieda/mondokki/internal/model"
 
@@ -84,8 +87,8 @@ func UpdateBooking(c *fiber.Ctx) error {
 
 	type UpdateBook struct {
 		BookingCode   string
-		DateStart     datatypes.Date
-		DateFinish    datatypes.Date
+		DateStart     string
+		DateFinish    string
 		PaymentAmount string
 		Status        string
 	}
@@ -113,14 +116,38 @@ func UpdateBooking(c *fiber.Ctx) error {
 		book.BookingCode = updateBookData.BookingCode
 	}
 
+	var layoutFormat = "2006-01-02T15:04:05Z"
 	// still broken, need fix
 	//
-	// if updateBookData.DateStart != "" {
-	// 	book.DateStart = updateBookData.DateStart
-	// }
-	// if updateBookData.DateFinish != "" {
-	// 	book.DateFinish = updateBookData.DateFinish
-	// }
+	if updateBookData.DateStart != "" {
+
+		t, err := time.Parse(layoutFormat, updateBookData.DateStart)
+
+		if err != nil {
+			return c.Status(500).JSON(fiber.Map{"status": "error", "message": "cannot parse updateBookData.DateStart"})
+		}
+
+		var ab2 = datatypes.Date(t)
+
+		book.DateStart = ab2
+		fmt.Printf("success update book.DateStart \n ")
+
+	}
+
+	if updateBookData.DateFinish != "" {
+
+		t, err := time.Parse(layoutFormat, updateBookData.DateFinish)
+
+		if err != nil {
+			return c.Status(500).JSON(fiber.Map{"status": "error", "message": "cannot parse updateBookData.DateFinish"})
+		}
+
+		var ab2 = datatypes.Date(t)
+
+		book.DateFinish = ab2
+		fmt.Printf("success update book.DateFinish \n ")
+
+	}
 
 	if updateBookData.PaymentAmount != "" {
 		book.PaymentAmount = updateBookData.PaymentAmount
