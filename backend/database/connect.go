@@ -18,8 +18,9 @@ var DB *gorm.DB
 
 // ConnectDB is used for connect to database
 func ConnectDB() {
+
 	var err error
-	p := Config("DB_PORT")
+	p := config.Config("DB_PORT")
 	port, err := strconv.ParseUint(p, 10, 32)
 
 	if err != nil {
@@ -40,7 +41,10 @@ func ConnectDB() {
 	fmt.Println("Connection opened to database")
 
 	// migrate the database
-	DB.AutoMigrate(&model.Note{})
+	DB.AutoMigrate(&model.Booking{})
+	DB.AutoMigrate(&model.Customer{})
+	DB.AutoMigrate(&model.Room{})
+	DB.AutoMigrate(&model.RoomUsed{})
 
 	fmt.Println("Database Migrated")
 }
