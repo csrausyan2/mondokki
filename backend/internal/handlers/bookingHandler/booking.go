@@ -1,4 +1,4 @@
-package accomodationHandler
+package bookingHandler
 
 import (
 	"fmt"
@@ -29,7 +29,6 @@ func CreateBooking(c *fiber.Ctx) error {
 	}
 
 	// add payment table to database
-
 	return c.JSON(fiber.Map{"status": "success", "message": "created note!", "data": book})
 
 }
@@ -60,6 +59,7 @@ func GetBookings(c *fiber.Ctx) error {
 	}
 
 	return c.JSON(fiber.Map{"status": "success", "message": "all books found", "data": books})
+
 }
 
 func DeleteBooking(c *fiber.Ctx) error {
@@ -111,14 +111,11 @@ func UpdateBooking(c *fiber.Ctx) error {
 	}
 
 	// update new Booking data
-	// must be more neat implementation
 	if updateBookData.BookingCode != "" {
 		book.BookingCode = updateBookData.BookingCode
 	}
 
 	var layoutFormat = "2006-01-02T15:04:05Z"
-	// still broken, need fix
-	//
 	if updateBookData.DateStart != "" {
 
 		t, err := time.Parse(layoutFormat, updateBookData.DateStart)
