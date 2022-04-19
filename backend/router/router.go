@@ -5,6 +5,7 @@ import (
 	"github.com/gofiber/fiber/v2/middleware/logger"
 
 	bookingRoutes "github.com/noieda/mondokki/internal/routes/booking"
+	customerRoutes "github.com/noieda/mondokki/internal/routes/customer"
 )
 
 func SetupRoutes(app *fiber.App) {
@@ -12,5 +13,5 @@ func SetupRoutes(app *fiber.App) {
 	api := app.Group("/api", logger.New())
 
 	bookingRoutes.SetupBookingRoutes(api)
-
+	customerRoutes.SetupCustomerRoutes(api)
 }

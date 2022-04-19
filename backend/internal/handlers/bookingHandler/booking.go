@@ -21,14 +21,14 @@ func CreateBooking(c *fiber.Ctx) error {
 		return c.Status(500).JSON(fiber.Map{"status": "error", "message": "review your input"})
 	}
 
-	// add uuid to the booking
+	// add uuid to the booking row
 	book.ID = uuid.New()
 	err = db.Create(&book).Error
 	if err != nil {
 		return c.Status(404).JSON(fiber.Map{"status": "error", "message": "could not create booking"})
 	}
 
-	// add payment table to database
+	// add payment row to database
 	return c.JSON(fiber.Map{"status": "success", "message": "created note!", "data": book})
 
 }

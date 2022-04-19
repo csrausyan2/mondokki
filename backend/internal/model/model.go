@@ -21,6 +21,7 @@ type Booking struct {
 // model for customer
 type Customer struct {
 	gorm.Model
+	ID            uuid.UUID
 	BookingId     uuid.UUID `gorm:"type:uuid"`
 	Booking       Booking   `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
 	CustomerName  string
@@ -32,6 +33,7 @@ type Customer struct {
 // model for accomodated room
 type Room struct {
 	gorm.Model
+	ID         uuid.UUID `gorm:"type:uuid"`
 	RoomNumber string
 	Type       string
 	Capacity   string
