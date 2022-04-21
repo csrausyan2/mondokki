@@ -94,6 +94,7 @@ func UpdateCustomer(c *fiber.Ctx) error {
 
 	// read params bookId and search the database
 	id := c.Params("customerId")
+
 	db.Find(&customer, "id = ?", id)
 	if customer.ID == uuid.Nil {
 		return c.Status(404).JSON(fiber.Map{"status": "error", "message": "customer id not found", "data": nil})
@@ -130,4 +131,5 @@ func UpdateCustomer(c *fiber.Ctx) error {
 
 	db.Save(&customer)
 	return c.JSON(fiber.Map{"status": "success", "message": "customer data updated", "data": customer})
+
 }

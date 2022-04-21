@@ -6,6 +6,7 @@ import (
 
 	bookingRoutes "github.com/noieda/mondokki/internal/routes/booking"
 	customerRoutes "github.com/noieda/mondokki/internal/routes/customer"
+	roomRoutes "github.com/noieda/mondokki/internal/routes/room"
 )
 
 func SetupRoutes(app *fiber.App) {
@@ -14,4 +15,5 @@ func SetupRoutes(app *fiber.App) {
 
 	bookingRoutes.SetupBookingRoutes(api)
 	customerRoutes.SetupCustomerRoutes(api)
+	roomRoutes.SetupRoomRoutes(api)
 }
