@@ -3,6 +3,7 @@ import './App.css';
 
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import BookingForm from './components/BookingForm';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <BookingForm />
       <Footer />
     </div>
   );

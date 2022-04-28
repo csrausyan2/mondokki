@@ -9,7 +9,7 @@ import {
 function Navigation() {
     return (
         <Router>
-            <div className="Navigation">
+            <div className="Navigation fixed bg-amber-500 w-screen z-20">
                 <header className="Navigation-Header h-12 flex justify-between items-center">
                     <div className='logo w-16'>
                         <p>logo</p>
