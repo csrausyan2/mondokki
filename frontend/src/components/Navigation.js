@@ -41,7 +41,8 @@ function Navigation() {
 
     return (
         <Router>
-            <div className={`active ${show && 'hidden'}`}>
+            {/* https://tailwindcss.com/docs/translate + https://reactjs.org/docs/conditional-rendering.html */}
+            <div className={`${show && '-translate-y-6'} translate-y-0`}>
                 <div className="Navigation fixed bg-amber-500 w-screen z-20 px-12">
                     <header className="Navigation-Header h-12 flex justify-between items-center">
                         <div className='logo w-16'>
