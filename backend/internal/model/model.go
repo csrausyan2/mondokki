@@ -37,6 +37,7 @@ type Room struct {
 	RoomNumber string
 	Type       string
 	Capacity   string
+	Facility   string
 	Price      string
 }
 

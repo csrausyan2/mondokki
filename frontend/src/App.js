@@ -4,6 +4,7 @@ import './App.css';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import BookingForm from './components/BookingForm';
+import RoomsAvailable from './components/RoomsAvailable';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         </a>
       </header>
       <BookingForm />
+      <RoomsAvailable />
       <Footer />
     </div>
   );

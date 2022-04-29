@@ -85,6 +85,7 @@ func UpdateRoom(c *fiber.Ctx) error {
 		RoomNumber string
 		Type       string
 		Capacity   string
+		Facility   string
 		Price      string
 	}
 
@@ -106,6 +107,10 @@ func UpdateRoom(c *fiber.Ctx) error {
 
 	if updateRoomData.Capacity != "" {
 		room.Capacity = updateRoomData.Capacity
+	}
+
+	if updateRoomData.Facility != "" {
+		room.Facility = updateRoomData.Facility
 	}
 
 	if updateRoomData.Type != "" {
