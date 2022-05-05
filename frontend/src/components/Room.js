@@ -5,7 +5,7 @@ import {
     Link
   } from "react-router-dom";
 
-function Room() {
+function Room(props) {
     return (
         <div className="border-2 border-rose-400 w-full flex h-64 p-8" >
             <div className="w-1/3 border-2 border-rose-600">
