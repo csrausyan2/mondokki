@@ -13,13 +13,12 @@ func main() {
 	// start new fiber app
 
 	app := fiber.New()
+	app.Use(cors.New())
 
 	// app.Use(cors.New(cors.Config{
 	// 	AllowOrigins: "http://localhost:3001/",
 	// 	AllowHeaders: "*",
 	// }))
-
-	app.Use(cors.New())
 
 	// app.Get("/", func(c *fiber.Ctx) error {
 	// 	err := c.SendString("And the API IS UP :>")
