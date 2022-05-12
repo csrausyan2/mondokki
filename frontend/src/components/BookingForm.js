@@ -43,14 +43,7 @@ function BookingForm() {
                     />
             </label>
             <label className="grid grid-cols-2 gap-6">
-                <label className="block">
-                    <span class="text-gray-700">Check In Date</span>
-                    <input type="date" class="form-input mt-1 block w-full" />
-                </label>
-                <label className="block">
-                    <span class="text-gray-700">Check Out Date</span>
-                    <input type="date" class="form-input mt-1 block w-full" />
-                </label>
+                
                 <label className="block">
                     <span class="text-gray-700">Phone Number</span>
                     <input

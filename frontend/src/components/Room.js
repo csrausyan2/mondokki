@@ -12,15 +12,19 @@ function Room(props) {
                 <p>image</p>
             </div>
             <div className="w-2/3 pl-4 flex flex-col">
-                <div className="grow">
-                    {/* <p>type</p>
-                    <p>capacity</p>
-                    <p>facility</p>
-                    <p>price</p> */}
-                    <p>{props.type}</p>
-                    <p>{props.capacity}</p>
-                    <p>{props.facility}</p>
-                    <p>{props.price}</p>
+                <div className="flex grow flex-row">
+                    <div className="basis-1/2">
+                        <p>type</p>
+                        <p>capacity</p>
+                        <p>facility</p>
+                        <p>price</p>
+                    </div>
+                    <div className="basis-1/2">
+                        <p>{props.type}</p>
+                        <p>{props.capacity}</p>
+                        <p>{props.facility}</p>
+                        <p>{props.price}</p>
+                    </div>
                 </div>
                 <div className="flex flex-row-reverse">
                     <Router>
