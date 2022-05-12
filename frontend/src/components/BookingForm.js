@@ -68,10 +68,27 @@ function BookingForm() {
                     "
                     placeholder=""
                 />
-            </label>
+                </label>
+                <div></div>
+                <label className="block">
+                    <span class="text-gray-700">Coupon Code</span>
+                    <input
+                    type="text"
+                    className="
+                        mt-1
+                        block
+                        w-full
+                        rounded-md
+                        border-gray-300
+                        shadow-sm
+                        focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                    "
+                    placeholder=""
+                />
+                </label>
             
             </label>
-            <div className="flex flex-row-reverse">
+            <div className="flex flex-row-reverse pt-8">
                 <Router>
                     <Link to="/pesan">
                         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-40">Make booking</button>

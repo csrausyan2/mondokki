@@ -38,19 +38,43 @@ function RoomsAvailable() {
                 <div className="border-2 border-rose-400 w-full flex h-full p-8 mb-4 flex flex-row" >
                     <label className="block">
                         <span class="text-gray-700">Check In Date</span>
-                        <input type="date" class="form-input mt-1 block w-full" />
+                        <input type="date" class="mt-1
+                        block
+                        w-full
+                        rounded-md
+                        border-gray-300
+                        shadow-sm
+                        focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />
                     </label>
                     <label className="block">
                         <span class="text-gray-700">Check Out Date</span>
-                        <input type="date" class="form-input mt-1 block w-full" />
+                        <input type="date" class="mt-1
+                        block
+                        w-full
+                        rounded-md
+                        border-gray-300
+                        shadow-sm
+                        focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />
                     </label>
                     <label className="block">
                         <span class="text-gray-700">Adult</span>
-                        <input type="number" class="form-input mt-1 block w-full" />
+                        <input type="number" class="mt-1
+                        block
+                        w-full
+                        rounded-md
+                        border-gray-300
+                        shadow-sm
+                        focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />
                     </label>
                     <label className="block">
                         <span class="text-gray-700">Child</span>
-                        <input type="number" class="form-input mt-1 block w-full" />
+                        <input type="number" class="mt-1
+                        block
+                        w-full
+                        rounded-md
+                        border-gray-300
+                        shadow-sm
+                        focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50  " />
                     </label>
                 </div>
                 {rooms.map((item, index) => {
