@@ -36,11 +36,11 @@ function RoomsAvailable() {
 
     return (
         <div className="h-full justify-items-center grid grid-col-1">
-            <div className="w-1/3  grid grid-col-1 gap-6 py-12">
+            <div className="grid grid-col-1 gap-6 py-12 justify-items-center">
                 <div className="border-2 border-rose-400 w-full flex h-full p-8 mb-4 flex flex-row" >
                     <label className="block">
                         <span class="text-gray-700">Check In Date</span>
-                        <input type="date" class="mt-1
+                        <input type="date" value={checkIn} onChange={(e) => setCheckIn(e.target.value)} class="mt-1
                         block
                         w-full
                         rounded-md
@@ -50,7 +50,7 @@ function RoomsAvailable() {
                     </label>
                     <label className="block">
                         <span class="text-gray-700">Check Out Date</span>
-                        <input type="date" class="mt-1
+                        <input type="date" value={checkOut} onChange={(e) => setCheckOut(e.target.value)} class="mt-1
                         block
                         w-full
                         rounded-md
@@ -60,7 +60,7 @@ function RoomsAvailable() {
                     </label>
                     <label className="block">
                         <span class="text-gray-700">Adult</span>
-                        <input type="number" class="mt-1
+                        <input type="number" value={adult} onChange={(e) => setAdult(e.target.value)} class="mt-1
                         block
                         w-full
                         rounded-md
@@ -70,7 +70,7 @@ function RoomsAvailable() {
                     </label>
                     <label className="block">
                         <span class="text-gray-700">Child</span>
-                        <input type="number" class="mt-1
+                        <input type="number" value={children} onChange={(e) => setChildren(e.target.value)} class="mt-1
                         block
                         w-full
                         rounded-md
@@ -79,9 +79,11 @@ function RoomsAvailable() {
                         focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50  " />
                     </label>
                 </div>
-                {rooms.map((item, index) => {
-                    return <Room key={index} type={item.Type} capacity={item.Capacity} facility={item.Facility} price={item.Price}></Room>
-                })}
+                <div className="w-3/4 grid grid-col-1 gap-6 py-12">
+                    {rooms.map((item, index) => {
+                        return <Room key={index} type={item.Type} capacity={item.Capacity} facility={item.Facility} price={item.Price}></Room>
+                    })}
+                </div>
             </div>
         </div>
     )
