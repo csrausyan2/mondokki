@@ -18,11 +18,9 @@ function Home () {
                             <h1>Mondokki</h1>
                             <h2>An Opensource Solution for your accomodation business</h2>
                         </article>
-                        <Router>
-                            <Link to="/pesan">
-                                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-40">Make booking</button>
-                            </Link>
-                        </Router>
+                        <a href="https://github.com/noieda/mondokki">
+                            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-40">Github</button>
+                        </a>
                     </div>
                 </div>
             </div>
