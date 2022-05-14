@@ -5,6 +5,10 @@ import axios from  "axios"
 function RoomsAvailable() {
 
     const [rooms, setRooms] = useState([])
+    const [checkIn, setCheckIn] = useState(0)
+    const [checkOut, setCheckOut] = useState(0)
+    const [adult, setAdult] = useState(0)
+    const [children, setChildren] = useState(0)
 
     useEffect(() => {
 
@@ -21,8 +25,6 @@ function RoomsAvailable() {
             }).catch(err=>{
                 console.log(err)
             })
-
-            
 
         }
         // console.log(rooms)

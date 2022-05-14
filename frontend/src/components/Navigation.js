@@ -46,9 +46,9 @@ function Navigation() {
                 <div className="Navigation  px-12">
                     <header className="Navigation-Header h-12 flex justify-between items-center">
                         <div className='logo w-16'>
-                            <p>logo</p>
+                            <p>Mondokki</p>
                         </div>
-                        <div className='flex'>
+                        <div className='flex gap-4'>
                             <form className="">
                                 <label>
                                     <input className="w-60 rounded-lg" type="text" name="name" placeholder='Insert booking code'></input>

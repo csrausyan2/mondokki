@@ -1,5 +1,22 @@
 #mondokki
 
+###Overview
+Mondokki is Open-source web application for manage vacation rental that used for accomodation.
+
+###Features
+`todo`
+* Make reservation onsite
+* Check reservation status
+* Cancel reservation
+
+###what stack mondokki use?
+* Fiber : Golang-based framework for backend
+* React : Javacript framework for frontend
+
+###Installation
+`todo`
+___
+
 todos immediately:
 * try fetch data from backend to frontend
 * make appointment function in the backend
@@ -10,11 +27,3 @@ todos immediately:
 todos later:
 * make dashboard for owner
 
-###what is mondokki?
-it is _sort of_ web application for manage vacation rental that used for hotel, accomodation. _kinda_
-
-###what stack mondokki use?
-* fiber : golang-based framework for backend
-* react : javascript framework for frontend
-
-:)
