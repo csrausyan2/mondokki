@@ -35,9 +35,9 @@ function RoomsAvailable() {
 
 
     return (
-        <div className="h-full justify-items-center grid grid-col-1">
-            <div className="grid grid-col-1 gap-6 py-12 justify-items-center">
-                <div className="border-2 border-rose-400 w-full flex h-full p-8 mb-4 flex flex-row" >
+        <div className="rooms-available h-full justify-items-center grid grid-col-2">
+            <div className="grid gap-6 py-12 justify-items-center w-3/4">
+                <div className="border-2 border-rose-400 w-2/3 flex h-full p-8 mb-4 flex flex-row max-w-5xl" >
                     <label className="block">
                         <span class="text-gray-700">Check In Date</span>
                         <input type="date" value={checkIn} onChange={(e) => setCheckIn(e.target.value)} class="mt-1
@@ -79,12 +79,13 @@ function RoomsAvailable() {
                         focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50  " />
                     </label>
                 </div>
-                <div className="w-3/4 grid grid-col-1 gap-6 py-12">
+                <div className="w-full grid grid-col-1 gap-6 py-12 max-w-7xl">
                     {rooms.map((item, index) => {
                         return <Room key={index} type={item.Type} capacity={item.Capacity} facility={item.Facility} price={item.Price}></Room>
                     })}
                 </div>
             </div>
+            
         </div>
     )
 }

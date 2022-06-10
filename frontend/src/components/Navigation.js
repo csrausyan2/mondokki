@@ -42,21 +42,27 @@ function Navigation() {
     return (
         <Router>
             {/* https://tailwindcss.com/docs/translate + https://reactjs.org/docs/conditional-rendering.html */}
-            <div className={`${show ? '-translate-y-12' : 'translate-y-0'} fixed bg-amber-500 w-screen z-20 duration-300`}>
-                <div className="Navigation  px-12">
-                    <header className="Navigation-Header h-12 flex justify-between items-center">
-                        <div className='logo w-16'>
-                            <p>Mondokki</p>
+            <div className={`${show ? '-translate-y-16' : 'translate-y-0'} fixed bg-white w-screen z-20 duration-300`}>
+                <div className="Navigation px-12">
+                    <header className="Navigation-Header h-16 flex justify-between items-center">
+                        <div className='logo w-fit'>
+                            <Link to="/">
+                              <p className="text-mondokkiprimary-500 font-bold text-2xl">Mondokki</p>
+                            </Link>
                         </div>
                         <div className='flex gap-4'>
                             <form className="">
                                 <label>
-                                    <input className="w-60 rounded-lg" type="text" name="name" placeholder='Insert booking code'></input>
+                                    <input className="w-60 rounded-lg border-slate-400 " type="text" name="name" placeholder='Insert booking code'></input>
                                 </label>
                             </form>
-                            <Link to="/appointment">
-                                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-40">Make booking</button>
+                            <Link to="/about-us">
+                                <button className="text-mondokkiprimary-500 font-bold py-2 px-4 rounded w-40">About</button>
                             </Link>
+                            <Link to="/booking">
+                                <button className="text-mondokkiprimary-500 font-bold py-2 px-4 rounded w-40">Book Now</button>
+                            </Link>
+                  
                         </div>
                     </header>
                     

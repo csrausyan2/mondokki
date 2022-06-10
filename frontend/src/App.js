@@ -7,9 +7,14 @@ import BookingForm from './components/BookingForm';
 import RoomsAvailable from './components/RoomsAvailable';
 import Home from './components/Home';
 
+import { Helmet } from 'react-helmet'
+
 function App() {
   return (
     <div className="App">
+      <Helmet>
+        <title>Mondokki</title>
+      </Helmet>
       <Navigation />
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
