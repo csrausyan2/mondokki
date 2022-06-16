@@ -6,7 +6,17 @@ import Footer from './components/Footer';
 import BookingForm from './components/BookingForm';
 import RoomsAvailable from './components/RoomsAvailable';
 import Home from './components/Home';
+import Summary from './components/Summary';
+import Payment from './components/Payment';
 
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Routes,
+  Link
+} from "react-router-dom";
 import { Helmet } from 'react-helmet'
 
 function App() {
@@ -15,24 +25,24 @@ function App() {
       <Helmet>
         <title>Mondokki</title>
       </Helmet>
+
       <Navigation />
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-      <Home />
-      <BookingForm />
-      <RoomsAvailable />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          
+          <Route path="/bookingform" element={<BookingForm />}/>
+            
+          <Route path="roomsavailable" element={<RoomsAvailable />}/>
+            
+          <Route path="/summary" element={<Summary />}/>
+            
+          <Route path="/payment" element={<Payment />} />
+
+        </Routes>
+
+      </Router>
+
       <Footer />
     </div>
   );

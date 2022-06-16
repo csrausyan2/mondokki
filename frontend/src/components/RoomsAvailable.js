@@ -41,7 +41,7 @@ function RoomsAvailable() {
 
 
     return (
-        <div className="rooms-available h-full justify-items-center grid grid-col-2">
+        <div className="rooms-available h-full justify-items-center grid grid-col-2 py-32">
             <div className="grid gap-6 py-12 justify-items-center w-3/4">
                 <div className="border-2 border-rose-400 w-2/3 flex h-full p-8 mb-4 flex flex-row max-w-5xl gap-4" >
                     <label className="block">
@@ -85,11 +85,11 @@ function RoomsAvailable() {
                         focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50  " />
                     </label>
                     <label className="block flex items-center">
-                        <Router>
-                            <Link to="/book">
+                        {/* <Router> */}
+                            <Link to="/roomsavailable">
                                 <button className="bg-mondokkiprimary-500 hover:bg-mondokkiprimary-400 text-white font-bold py-2 px-4 rounded w-40">Check Rates</button>
                             </Link>
-                        </Router>
+                        {/* </Router> */}
                     </label>
                 </div>
                 <div className="w-full grid grid-col-1 gap-6 py-12 max-w-7xl">
