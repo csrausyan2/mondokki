@@ -59,7 +59,7 @@ function Navigation() {
                             <Link to="/about-us">
                                 <button className="text-mondokkiprimary-500 font-bold py-2 px-4 rounded w-40">About</button>
                             </Link>
-                            <Link to="/booking">
+                            <Link to="/roomsavailable">
                                 <button className="text-mondokkiprimary-500 font-bold py-2 px-4 rounded w-40">Book Now</button>
                             </Link>
                   
