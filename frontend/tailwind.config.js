@@ -36,6 +36,7 @@ module.exports = {
       pink: colors.pink,
       rose: colors.rose,
       mondokkiprimary: {
+        100: '#FCE5CF',
         400: '#F1764B',
         500: '#E83A14',
         600: '#C7210E',

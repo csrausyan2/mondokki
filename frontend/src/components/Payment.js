@@ -35,7 +35,7 @@ function Payment (props) {
                             </div>
                         </div>
                     </div>
-                    <div className="border-2 border-rose-400 h-fit w-2/3 p-12">
+                    <div className="border-2 border-rose-400 h-fit w-2/3 p-12 ">
                         <h3>credit card (visa/mastercard)</h3>
                         <p>payment total</p>
                         <h2>IDR 1.000.000</h2>
@@ -74,60 +74,69 @@ function Payment (props) {
                                     placeholder=""
                                     />
                                 </label>
-                                <div className="grid grid-cols-3 gap-6">
-                                    <label className="block w-full">
-                                        <span class="text-gray-700">Card Type</span>
-                                        <input
-                                        type="text"
-                                        className="
-                                            mt-1
-                                            block
-                                            w-full
-                                            rounded-md
-                                            border-gray-300
-                                            shadow-sm
-                                            focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
-                                        "
-                                        placeholder=""
-                                        />
-                                    </label>
-                                    <label className="block w-full">
-                                        <span class="text-gray-700">Expire Date</span>
-                                        <input
-                                        type="text"
-                                        className="
-                                            mt-1
-                                            block
-                                            w-full
-                                            rounded-md
-                                            border-gray-300
-                                            shadow-sm
-                                            focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
-                                        "
-                                        placeholder=""
-                                        />
-                                    </label>
-                                    <label className="block w-full">
-                                        <span class="text-gray-700">CVV Code</span>
-                                        <input
-                                        type="text"
-                                        className="
-                                            mt-1
-                                            block
-                                            w-full
-                                            rounded-md
-                                            border-gray-300
-                                            shadow-sm
-                                            focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
-                                        "
-                                        placeholder=""
-                                        />
-                                    </label>
+                                <div>
+                                    <div className="grid grid-cols-3 gap-6">
+                                        <label className="block w-full">
+                                            <span class="text-gray-700">Card Type</span>
+                                            <input
+                                            type="text"
+                                            className="
+                                                mt-1
+                                                block
+                                                w-full
+                                                rounded-md
+                                                border-gray-300
+                                                shadow-sm
+                                                focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                                            "
+                                            placeholder=""
+                                            />
+                                        </label>
+                                        <label className="block w-full">
+                                            <span class="text-gray-700">Expire Date</span>
+                                            <input
+                                            type="text"
+                                            className="
+                                                mt-1
+                                                block
+                                                w-full
+                                                rounded-md
+                                                border-gray-300
+                                                shadow-sm
+                                                focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                                            "
+                                            placeholder=""
+                                            />
+                                        </label>
+                                        <label className="block w-full">
+                                            <span class="text-gray-700">CVV Code</span>
+                                            <input
+                                            type="text"
+                                            className="
+                                                mt-1
+                                                block
+                                                w-full
+                                                rounded-md
+                                                border-gray-300
+                                                shadow-sm
+                                                focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                                            "
+                                            placeholder=""
+                                            />
+                                        </label>
+                                    </div>
+                                    
                                 </div>
-                            
+
+                                <div className="grid grid-cols-1 justify-items-end mt-6">
+                                    <Link to="/pesan">
+                                        <button disabled className="bg-mondokkiprimary-500 disabled:bg-mondokkiprimary-100 hover:bg-mondokkiprimary-400 text-white font-bold py-2 px-4 rounded w-fit">Pay With Credit Card</button>
+                                    </Link>
+                                </div>
+
                         </form>
 
-
+                        
 
                         
                     </div>
