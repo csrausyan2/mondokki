@@ -129,8 +129,8 @@ function Payment (props) {
                                 </div>
 
                                 <div className="grid grid-cols-1 justify-items-end mt-6">
-                                    <Link to="/pesan">
-                                        <button disabled className="bg-mondokkiprimary-500 disabled:bg-mondokkiprimary-100 hover:bg-mondokkiprimary-400 text-white font-bold py-2 px-4 rounded w-fit">Pay With Credit Card</button>
+                                    <Link to="/invoice">
+                                        <button className="bg-mondokkiprimary-500 disabled:bg-mondokkiprimary-100 hover:bg-mondokkiprimary-400 text-white font-bold py-2 px-4 rounded w-fit">Pay With Credit Card</button>
                                     </Link>
                                 </div>
 

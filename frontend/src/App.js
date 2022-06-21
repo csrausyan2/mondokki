@@ -8,7 +8,7 @@ import RoomsAvailable from './components/RoomsAvailable';
 import Home from './components/Home';
 import Summary from './components/Summary';
 import Payment from './components/Payment';
-
+import Invoice from './components/Invoice';
 
 import {
   BrowserRouter as Router,
@@ -27,18 +27,20 @@ function App() {
       </Helmet>
 
       <Navigation />
+      
       <Router>
         <Routes>
           <Route path="/" element={<Home />}/>
           
           <Route path="/bookingform" element={<BookingForm />}/>
             
-          <Route path="roomsavailable" element={<RoomsAvailable />}/>
+          <Route path="/roomsavailable" element={<RoomsAvailable />}/>
             
-          <Route path="/summary" element={<Summary />}/>
+          <Route path="/tes" element={<Summary />} />
             
           <Route path="/payment" element={<Payment />} />
 
+          <Route path="/invoice" element={<Invoice />} />
         </Routes>
 
       </Router>

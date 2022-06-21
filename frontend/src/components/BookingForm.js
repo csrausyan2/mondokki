@@ -160,10 +160,10 @@ function BookingForm() {
 
             <div className="flex flex-row pt-8 gap-6">
                 {/* <Router> */}
-                    <Link to="/pesan">
+                    <Link to="/roomsavailable">
                         <button className="bg-mondokkiprimary-500 hover:bg-mondokkiprimary-400 text-white font-bold py-2 px-4 rounded w-fit">Change Booking Date</button>
                     </Link>
-                    <Link to="/pesan">
+                    <Link to="/tes">
                         <button className="bg-mondokkiprimary-500 hover:bg-mondokkiprimary-400 text-white font-bold py-2 px-4 rounded w-fit">Confirm Summary</button>
                     </Link>
                 {/* </Router> */}

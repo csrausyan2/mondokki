@@ -5,8 +5,8 @@ import {
     Link
   } from "react-router-dom";
 
-function Summary(props) {
-    return(
+function Invoice() {
+    return (
         <div className="bg-stone-200 grid justify-items-center py-12">
             <h1>Your Booking Summary</h1>
             <div className="flex flex-col gap-8 my-12">
@@ -42,18 +42,18 @@ function Summary(props) {
                 </div>
             </div>
 
-            <div className="flex flex-row pt-8 gap-6">
-                
+            {/* <div className="flex flex-row pt-8 gap-6">
+                <Router>
                     <Link to="/pesan">
                         <button className="bg-mondokkiprimary-500 hover:bg-mondokkiprimary-400 text-white font-bold py-2 px-4 rounded w-fit">Change Information</button>
                     </Link>
                     <Link to="/payment">
                         <button className="bg-mondokkiprimary-500 hover:bg-mondokkiprimary-400 text-white font-bold py-2 px-4 rounded w-fit">Continue to Payment</button>
                     </Link>
-                
-            </div>
+                </Router>
+            </div> */}
         </div>
     )
 }
 
-export default Summary
+export default Invoice
