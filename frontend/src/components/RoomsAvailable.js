@@ -18,6 +18,8 @@ function RoomsAvailable() {
 
     useEffect(() => {
 
+        console.log("roomsavailalbe used")
+
         async function getRoomsData(){
             
             await axios.get(`http://127.0.0.1:3000/api/room/`).then(res=>{
@@ -26,7 +28,7 @@ function RoomsAvailable() {
                 roomsdata.forEach(element => {
                     console.log(element.Capacity)
                 });
-                console.log("roomdata")
+                // console.log("roomdata")
                 setRooms(roomsdata)
             }).catch(err=>{
                 console.log(err)

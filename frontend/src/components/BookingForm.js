@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
     BrowserRouter as Router,
     Switch,
@@ -6,6 +7,11 @@ import {
   } from "react-router-dom";
 
 function BookingForm() {
+
+    useEffect(() => {
+        console.log("booking form opened")
+    }, [])
+
     return(
         <div className="bg-stone-200 grid justify-items-center py-32">
             <h1>Your Information</h1>
@@ -163,7 +169,7 @@ function BookingForm() {
                     <Link to="/roomsavailable">
                         <button className="bg-mondokkiprimary-500 hover:bg-mondokkiprimary-400 text-white font-bold py-2 px-4 rounded w-fit">Change Booking Date</button>
                     </Link>
-                    <Link to="/tes">
+                    <Link to="/summary">
                         <button className="bg-mondokkiprimary-500 hover:bg-mondokkiprimary-400 text-white font-bold py-2 px-4 rounded w-fit">Confirm Summary</button>
                     </Link>
                 {/* </Router> */}

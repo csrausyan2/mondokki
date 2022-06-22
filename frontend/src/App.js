@@ -12,14 +12,21 @@ import Invoice from './components/Invoice';
 
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
   Routes,
   Link
 } from "react-router-dom";
 import { Helmet } from 'react-helmet'
+import { useEffect, useState } from "react"
 
 function App() {
+
+  // const [pages, setPages] = useState([])
+
+  useEffect(() => {
+    console.log("appjs use")
+  }, [])
+
   return (
     <div className="App">
       <Helmet>
@@ -36,7 +43,7 @@ function App() {
             
           <Route path="/roomsavailable" element={<RoomsAvailable />}/>
             
-          <Route path="/tes" element={<Summary />} />
+          <Route path="/summary" element={<Summary />} />
             
           <Route path="/payment" element={<Payment />} />
 

@@ -7,7 +7,7 @@ import {
 
 function Summary(props) {
     return(
-        <div className="bg-stone-200 grid justify-items-center py-12">
+        <div className="bg-stone-200 grid justify-items-center py-12 min-h-full">
             <h1>Your Booking Summary</h1>
             <div className="flex flex-col gap-8 my-12">
                 <div className="flex flex-row gap-16">
@@ -44,7 +44,7 @@ function Summary(props) {
 
             <div className="flex flex-row pt-8 gap-6">
                 
-                    <Link to="/pesan">
+                    <Link to="/bookingform">
                         <button className="bg-mondokkiprimary-500 hover:bg-mondokkiprimary-400 text-white font-bold py-2 px-4 rounded w-fit">Change Information</button>
                     </Link>
                     <Link to="/payment">

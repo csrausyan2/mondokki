@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
     BrowserRouter as Router,
     Switch,
@@ -5,9 +6,14 @@ import {
     Link
   } from "react-router-dom";
 
-function Invoice() {
+function Invoice(props) {
+
+    useEffect(() => {
+        console.log("invoice page")
+    }, [])
+
     return (
-        <div className="bg-stone-200 grid justify-items-center py-12">
+        <div className="bg-stone-200 grid justify-items-center py-12 min-h-screen ">
             <h1>Your Booking Summary</h1>
             <div className="flex flex-col gap-8 my-12">
                 <div className="flex flex-row gap-16">

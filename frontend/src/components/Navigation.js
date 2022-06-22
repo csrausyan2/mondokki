@@ -38,6 +38,7 @@ function Navigation() {
         }
       }, [lastScrollY]);
 
+    
 
     return (
         <Router>
@@ -56,10 +57,10 @@ function Navigation() {
                                     <input className="w-60 rounded-lg border-slate-400 " type="text" name="name" placeholder='Insert booking code'></input>
                                 </label>
                             </form>
-                            <Link to="/about-us">
+                            <Link reloadDocument to="/about-us">
                                 <button className="text-mondokkiprimary-500 font-bold py-2 px-4 rounded w-40">About</button>
                             </Link>
-                            <Link to="/roomsavailable">
+                            <Link reloadDocument to="/roomsavailable">
                                 <button className="text-mondokkiprimary-500 font-bold py-2 px-4 rounded w-40">Book Now</button>
                             </Link>
                   
