@@ -21,7 +21,7 @@ import { useEffect, useState } from "react"
 
 function App() {
 
-  // const [pages, setPages] = useState([])
+  // const [pages, setPages] = useState("home")
 
   useEffect(() => {
     console.log("appjs use")
@@ -39,17 +39,20 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}/>
           
-          <Route path="/bookingform" element={<BookingForm />}/>
-            
+          {/* route for user to reserve a room */}
           <Route path="/roomsavailable" element={<RoomsAvailable />}/>
+
+          <Route path="/bookingform" element={<BookingForm />}/>
             
           <Route path="/summary" element={<Summary />} />
             
           <Route path="/payment" element={<Payment />} />
 
           <Route path="/invoice" element={<Invoice />} />
-        </Routes>
 
+          {/* another route */}
+          <Route path="/invoice" element={<Invoice />} />
+        </Routes>
       </Router>
 
       <Footer />

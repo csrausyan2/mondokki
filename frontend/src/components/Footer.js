@@ -16,7 +16,7 @@ function Footer() {
                         <div className='h-36 w-36 rounded-full bg-slate-300 mb-4'>
                         </div>
 
-                            <Link to="/">
+                            <Link to="/" onClick={() => window.location.reload()}>
                                 <p className="text-white font-bold text-2xl">Mondokki</p>
                             </Link>
 
